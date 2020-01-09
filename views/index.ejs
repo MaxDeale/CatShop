@@ -1,0 +1,49 @@
+<% include ./partials/header %>
+
+
+<div class="ui main text container">
+    <div class=" ui top attatched segment">
+
+        <div class=" ui divided items">
+
+            <% cats.forEach(function(cat){ %>
+
+            <div class="item">
+                <div class="image">
+                    <img src="<%= cat.image %>" alt="">
+                </div>
+
+                <div class="content">
+                    <a href="/cats/<%= cat._id %>" class=" header">
+                        <h2><%=cat.catName%></h2>
+                    </a>
+
+                    <div class="meta">
+                        <% if(cat.body && cat.body.length > 0) { %>
+                        <span><%= cat.created.toDateString() %></span>
+                        <% } %>
+                    </div>
+                    <div class="description">
+                        <p><%- cat.body.substring(0,100) %>...</p>
+                    </div>
+                    <div class="extra">
+                        <a href="/cats/<%= cat._id %>" class=" ui basic floated violet button">Read More</a>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <% }) %>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<% include ./partials/footer %>

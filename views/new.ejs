@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">New Cat</div>
+    <form class="ui form" action="/cats" method="POST">
+        <div class="field">
+            <label>Title</label>
+            <input type="text" name="cat[title]" placeholder="title">
+        </div>
+        <div class="field">
+            <label>Image</label>
+            <input type="text" name="cat[image]" placeholder="image">
+        </div>
+        <div class="field">
+            <label>Cat Info</label>
+            <textarea name="cat[body]"></textarea>
+
+        </div>
+
+        <input class="ui violet basic button big" type="submit">
+
+    </form>
+</div>
+
+<% include ./partials/footer %>

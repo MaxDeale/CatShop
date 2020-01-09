@@ -1,0 +1,11 @@
+i.fas {
+    padding-right: 10px;
+}
+
+.container.main {
+    margin-top: 8rem;
+}
+
+#delete {
+    display: inline;
+}

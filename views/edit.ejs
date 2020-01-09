@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">Edit <%= cat.catName %></div>
+    <form class="ui form" action="/cats/<%= cat._id %>?_method=PUT" method="POST">
+        <div class="field">
+            <label>Title</label>
+            <input type="text" name="cat[catName]" value="<%= cat.catName %>">
+        </div>
+        <div class="field">
+            <label>Image</label>
+            <input type="text" name="cat[image]" value=" <%= cat.image %>">
+        </div>
+        <label>Cat Info</label>
+        <div class="field">
+            <textarea name="cat[body]"> <%= cat.body %></textarea>
+
+        </div>
+
+        <input class="ui violet basic button big" type="submit">
+
+    </form>
+</div>
+
+<% include ./partials/footer %>
